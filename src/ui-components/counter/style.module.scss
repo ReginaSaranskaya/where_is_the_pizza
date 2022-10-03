@@ -1,0 +1,36 @@
+@import "../../styles/extends";
+
+.Counter {
+  display: inline-block;
+  border-radius: 6px;
+  &__button {
+    @extend %text;
+    text-align: center;
+    font-weight: 600;
+    line-height: 20px;
+    @extend %button;
+    background-color: $light-primary;
+    border: none;
+    padding: 8px;
+    color: $primary;
+    border-radius: 0;
+  }
+
+  &__input {
+    @extend %text;
+    width: 40px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 20px;
+    color: $primary;
+    border: none;
+    background: $light-primary;
+    padding: 8px;
+  }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,130 @@
+@import "../styles/extends";
+
+.SectionTitle {
+  @extend %title2;
+}
+
+
+
+.CardTitle {
+  @extend %titleCard;
+}
+
+.SmallCardTitle {
+  @extend %title4;
+}
+
+.ButtonFiltr {
+  padding: 9px 16px;
+  @extend %button;
+  @extend %text;
+  background-color: white;
+  border: 1px solid $border-color;
+  vertical-align: middle;
+  transition: background-color color 0.25s ease-out;
+
+  &__image {
+    vertical-align: middle;
+    margin-right: 5px;
+    transition: transform 0.25s ease-out;
+  }
+}
+
+.FilterIngridient,
+.RadioButton {
+  &__input {
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  &__label {
+    @extend %button;
+    @extend %smallText;
+    background: white;
+    display: inline-block;
+    border: 1px solid $border-color;
+    padding: 11px 16px;
+  }
+
+  &__input:checked + &__label {
+    background-color: $primary;
+    color: white;
+  }
+}
+
+.FormsRadioButton__input {
+  &:checked,
+  &:not(:checked) {
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  &:checked + label,
+  &:not(:checked) + label {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    @extend %text;
+  }
+
+  &:checked + label:before,
+  &:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $hint-color;
+    border-radius: 100%;
+    background: #fff;
+  }
+
+  &:checked + label:before,
+  &:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $hint-color;
+    border-radius: 100%;
+    background: #fff;
+  }
+
+  &:checked + label:before {
+    border: 1px solid $primary;
+  }
+  &:checked + label:after,
+  &:not(:checked) + label:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: $primary;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  &:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  &:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
