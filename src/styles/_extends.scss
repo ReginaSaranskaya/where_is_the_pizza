@@ -57,5 +57,27 @@
   border-radius: 6px;
   background-color: $primary;
   cursor: pointer;
-  transition: background-color color 0.25s ease-out;
+  transition: background-color 0.25s ease-out,
+              color 0.25s ease-out;
+}
+
+@mixin volume {
+
+  &__input {
+    appearance: none;
+  }
+
+  &__label {
+    @extend %button;
+    @extend %smallText;
+    background: white;
+    display: inline-block;
+    border: 1px solid $border-color;
+    padding: 11px 16px;
+  }
+
+  &__input:checked + &__label {
+    background-color: $primary;
+    color: white;
+  }
 }

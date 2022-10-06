@@ -29,16 +29,16 @@
   }
 
   &_primary:hover {
-    background-color: rgb(232, 97, 0);
+    background: $bg-hover-btn;
   }
 
   &_primary:active {
-    background-color: rgb(255, 105, 0);
-    color: rgb(255, 165, 102);
+    background: $bg-active-btn;
+    color: $color-active-btn;
   }
 
   &_text:hover {
-    background-color: rgba(245, 245, 245, 0.623);
+    background-color: $bg_text-hover-btn;
     color: $primary;
   }
 
@@ -48,8 +48,6 @@
   }
 
   &_text:active {
-    -webkit-box-shadow: 0px 4px 0px $border-color;
-    -moz-box-shadow: 0px 4px 0px $border-color;
     box-shadow: 0px 4px 0px $border-color;
   }
 }

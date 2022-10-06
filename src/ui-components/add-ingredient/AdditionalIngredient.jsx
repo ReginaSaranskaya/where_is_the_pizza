@@ -1,28 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "../style.module.scss";
 
-import Cheese from "./img/cheese.svg";
-import Onion from "./img/onion.svg";
-import Champignons from "./img/champignons.svg";
-import Pepper from "./img/pepper.svg";
+import styles from "./style.module.scss";
+import cheese from "./img/cheese.svg";
+import onion from "./img/onion.svg";
+import champignons from "./img/champignons.svg";
+import pepper from "./img/pepper.svg";
 import Checked from "./img/checked.svg";
 
 const icons = {
-  cheese: Cheese,
-  onion: Onion,
-  champignons: Champignons,
-  pepper: Pepper,
+  cheese,
+  onion,
+  champignons,
+  pepper
 };
 
-function AdditionalIngredient({ name, text, price }) {
+function AdditionalIngredient({ name, text, price, handleClick }) {
   return (
     <label className={styles.AdditionalIngredient} htmlFor={name}>
       <input
         className={styles.AdditionalIngredient__checkbox}
-        onChange={() => {
-          console.log("check");
-        }}
+        onChange={handleClick}
         type="checkbox"
         name={name}
         id={name}
@@ -41,6 +39,7 @@ AdditionalIngredient.propTypes = {
   name: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired
 };
 
 export default AdditionalIngredient;

@@ -3,6 +3,7 @@
 .Counter {
   display: inline-block;
   border-radius: 6px;
+
   &__button {
     @extend %text;
     text-align: center;

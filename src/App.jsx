@@ -1,5 +1,8 @@
 import React from "react";
 
+// import RadioButton from "./ui-components/RadioButton/RadioButton";
+// import AdditionalIngredient from "./ui-components/add-ingredient/AdditionalIngredient";
+
 
 // const ingridients = [
 //   { name: 'cheese', text: "Моцарелла", price: "59" },
@@ -8,7 +11,14 @@ import React from "react";
 //   { name: 'pepper', text: "Сладкий перец", price: "59" },
 // ];
 
+// function reg(e) {
+//   e.preventDefault();
+//   console.log('click')
+// }
+
 function App() {
+
+
   return (
     <div className="App">
       {/* <SectionTitle>Пицца</SectionTitle>
@@ -27,7 +37,7 @@ function App() {
       <FormsRadioButton id="payment" name="payment">
         Наличными
       </FormsRadioButton>
-      {ingridients.map(({name, text, price}) => <AdditionalIngredient name={name} text={text} price={price} />)}
+      // {ingridients.map(({name, text, price}) => <AdditionalIngredient name={name} text={text} price={price} />)}
       <Price>от 399 ₽</Price>
       <FormsInput type="text" subtext="Алексей" name="firstName">Имя*</FormsInput> */}
     </div>

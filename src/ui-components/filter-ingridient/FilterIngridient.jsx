@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./style.module.scss"
@@ -15,8 +14,8 @@ function FilterIngridient({ children, id = "", name = "" }) {
 
 FilterIngridient.propTypes = {
     children: PropTypes.node.isRequired,
-    id: PropTypes.string,
-    name: PropTypes.string
+    id: PropTypes.node.isRequired,
+    name: PropTypes.node.isRequired
 };
 
 export default FilterIngridient;
