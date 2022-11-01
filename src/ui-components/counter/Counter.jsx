@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import cn from 'classnames';
 
 import styles from "./style.module.scss";
 
-function Counter({ onChange, initialState = 1 }) {
+function Counter({ onChange, initialState = 1, className = "" }) {
   const [count, setCount] = useState(initialState);
+
+  useEffect(() => {
+    if (count !== initialState) {
+      onChange(count)
+    }
+  }, [onChange, count, initialState]);
 
   const decrement = () => {
     setCount((prevCount) => prevCount - 1);
@@ -17,15 +24,15 @@ function Counter({ onChange, initialState = 1 }) {
   };
 
   const handleChange = (e) => {
-    setCount(e.target.value)
+    setCount(Number(e.target.value))
   }
 
   return (
-    <div className={styles.Counter}>
+    <div className={cn(styles.Counter, className)}>
       <button className={styles.Counter__button} type="button" onClick={decrement}>
         -
       </button>
-      <input className={styles.Counter__input} type="number" value={count} onChange={(handleChange)}/>
+      <input className={styles.Counter__input} type="number" value={count === 0 ? '' : count} onChange={handleChange}/>
       <button className={styles.Counter__button} type="button" onClick={increment}>
         +
       </button>
@@ -36,10 +43,7 @@ function Counter({ onChange, initialState = 1 }) {
 Counter.propTypes = {
   initialState: PropTypes.number,
   onChange: PropTypes.func.isRequired,
-};
-
-Counter.defaultProps = {
-  initialState: 1,
+  className: PropTypes.string
 };
 
 export default Counter;

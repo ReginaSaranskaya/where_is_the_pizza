@@ -1,0 +1,72 @@
+@import "../../styles/extends";
+
+.CartCardTitle {
+  @extend %title4;
+  margin-bottom: 8px;
+}
+
+.CartCard {
+  box-sizing: border-box;
+  display: flex;
+  padding: 16px;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+
+  &__img {
+    margin-right: 16px;
+    display: block;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.CartCard_big {
+  justify-content: flex-start;
+  align-items: center;
+  max-height: 152px;
+
+  &__img {
+    max-height: 120px;
+  }
+
+  &__wrapper {
+    width: 269px;
+    margin-right: 214px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__counter {
+    margin-right: 40px;
+  }
+}
+
+.CartCard_small {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__img {
+    max-height: 94px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__text {
+    @extend %text;
+  }
+
+  &__container {
+    width: 225px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 112px;
+    margin-top: -38px;
+  }
+}

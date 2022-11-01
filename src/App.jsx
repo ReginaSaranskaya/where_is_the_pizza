@@ -1,4 +1,6 @@
 import React from "react";
+import CartCard from "./components/cartCard/CartCard";
+import Modal from "./ui-components/modal/Modal";
 
 // import RadioButton from "./ui-components/RadioButton/RadioButton";
 // import AdditionalIngredient from "./ui-components/add-ingredient/AdditionalIngredient";
@@ -16,11 +18,23 @@ import React from "react";
 //   console.log('click')
 // }
 
+const handleChange = (e) => {
+  console.log(e)
+}
+
 function App() {
 
+  const [isModal, setModal] = React.useState(true);
 
   return (
     <div className="App">
+      <div className="wrapper">
+        <CartCard onChange={handleChange} size="small"/>
+      </div>
+      <button className="button" type="button" onClick={() => setModal(true)}>Click Here</button>
+      {isModal && <Modal onClose={setModal} isVisible={isModal} location="center">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </Modal>}
       {/* <SectionTitle>Пицца</SectionTitle>
       <SmallCardTitle>Супер Филадельфия</SmallCardTitle>
       <CardTitle>EASY PEASY огуречный расколбас</CardTitle>
