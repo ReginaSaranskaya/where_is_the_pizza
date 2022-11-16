@@ -1,0 +1,24 @@
+@import "../../styles/extends";
+
+.InputText {
+  @extend %smallText;
+  color: $hint-color;
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    @extend %button;
+    @extend %text;
+    margin-top: 8px;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    padding: 13px 16px;
+  }
+
+  &__input:focus-visible,
+  &__input:active,
+  &__input:focus {
+    outline: none !important;
+    border-color: $primary;
+  }
+}

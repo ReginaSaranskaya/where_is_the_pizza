@@ -1,0 +1,49 @@
+@import "../../styles/extends";
+
+.AdditionalIngredient {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  &__container {
+    position: relative;
+    margin-bottom: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 105px;
+    aspect-ratio: 1/1;
+    border: 1px solid $border-color;
+    border-radius: 12px;
+  }
+
+  &__checkbox {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  &__iconChecked {
+    display: none;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+
+  &__checkbox:checked ~ &__container {
+    border-color: $primary;
+  }
+
+  &__checkbox:checked ~ &__container &__iconChecked {
+    display: block;
+  }
+
+  &__title {
+    @extend %smallText;
+  }
+
+  &__price {
+    @extend %smallText;
+    color: $primary;
+  }
+}

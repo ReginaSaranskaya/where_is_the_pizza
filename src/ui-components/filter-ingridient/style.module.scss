@@ -1,0 +1,22 @@
+@import "../../styles/extends";
+
+.FilterIngridient {
+
+  &__input {
+    appearance: none;
+  }
+
+  &__label {
+    @extend %button;
+    @extend %smallText;
+    background: white;
+    display: inline-block;
+    border: 1px solid $border-color;
+    padding: 11px 16px;
+  }
+
+  &__input:checked + &__label {
+    background-color: $primary;
+    color: white;
+  }
+}

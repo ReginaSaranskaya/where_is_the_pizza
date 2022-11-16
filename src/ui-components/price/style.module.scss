@@ -1,0 +1,19 @@
+@import "../../styles/extends";
+
+.Price {
+
+  &_small {
+    @extend %text;
+    font-weight: 600;
+  }
+
+  &_middle {
+    @extend %titleCard;
+  }
+
+  &_large {
+    @extend %title4;
+  }
+
+  color: $primary;
+}

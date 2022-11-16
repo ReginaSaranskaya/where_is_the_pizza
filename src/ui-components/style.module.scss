@@ -1,0 +1,41 @@
+@import "../styles/extends";
+
+.SectionTitle {
+  @extend %title2;
+}
+
+.CardTitle {
+  @extend %titleCard;
+}
+
+.SmallCardTitle {
+  @extend %title4;
+}
+
+.ButtonFilter {
+  padding: 9px 16px;
+  @extend %button;
+  @extend %text;
+  background-color: white;
+  border: 1px solid $border-color;
+  vertical-align: middle;
+  transition: background-color 0.25s ease-out,
+              color 0.25s ease-out;
+
+  &__image {
+    vertical-align: middle;
+    margin-right: 5px;
+    transition: transform 0.25s ease-out;
+  }
+}
+
+.FilterIngridient{
+  @include volume;
+}
+
+
+
+
+
+
+
