@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import cnBind from 'classnames/bind';
 
 import CartCardTitle from "./CartCardTitle";
-import Price from "../../ui-components/price/Price";
+import Price from "../../ui-components/Price/Price";
 import styles from "./style.module.scss";
-import PizzaImage from "../card/img/pizza.jpg";
-import Counter from "../../ui-components/counter/Counter";
+import PizzaImage from "../Card/img/pizza.jpg";
+import Counter from "../../ui-components/Counter/Counter";
 
 const cn = cnBind.bind(styles);
 

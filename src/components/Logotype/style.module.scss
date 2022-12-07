@@ -1,0 +1,16 @@
+@import "../../styles/extends";
+
+.Logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  &__image {
+    margin-right: 12px;
+  }
+
+  &__name {
+    @extend %title4;
+    font-weight: 500;
+  }
+}
