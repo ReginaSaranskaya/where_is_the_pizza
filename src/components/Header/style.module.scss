@@ -1,0 +1,159 @@
+@import "../../styles/extends";
+
+.Cart {
+  width: auto;
+  display: flex;
+  padding: 8px 16px;
+  min-width: 89px;
+  align-items: center;
+  @extend %button;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &__container {
+    margin-right: 8px;
+    width: 24px;
+  }
+
+  &__price {
+    @extend %text;
+    color: white;
+  }
+
+  &:hover {
+    background: $bg-hover-btn;
+    color: $bg_text-hover-btn;
+  }
+}
+
+.Navigation {
+  &__list {
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  &__item {
+    margin-right: 38px;
+  }
+
+  &__link {
+    @extend %text;
+    text-decoration: none;
+
+    &:hover {
+      color: $bg-hover-btn;
+    }
+
+    &:active {
+      color: $color-active-btn;
+    }
+  }
+}
+
+.Navbar {
+  margin: 30px auto;
+  width: 1290px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 39px;
+    text-decoration: none;
+    border: $border;
+    border-radius: 12px;
+    @extend %text;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: rgb(255, 165, 102, 0.2);
+    }
+
+    &:active {
+      background: rgb(255, 165, 102, 0.35);
+      color: white;
+    }
+  }
+
+  &__img {
+    height: 32px;
+    margin-bottom: 8px;
+
+    &Small {
+      height: 20px;
+      margin-top: 6px;
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.Header {
+  width: 100%;
+  background: white;
+
+  &--fixed {
+    position: fixed;
+  }
+
+  &__border,
+  &__info {
+    border-bottom: 1.5px solid $border-color;
+  }
+
+  &__container {
+    margin: 0 auto;
+    width: 1290px;
+    padding: 16px 0;
+
+    &--up {
+      display: flex;
+      justify-content: space-between;
+      padding: 13px 0;
+    }
+  }
+
+  &__location {
+    width: auto;
+    display: flex;
+    margin-right: 40px;
+
+    &_city {
+      margin-left: 11px;
+      font: inherit;
+      letter-spacing: inherit;
+      word-spacing: inherit;
+      border: none;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__schedule {
+    @extend %text;
+    width: auto;
+  }
+
+  &__time {
+    font-weight: 600;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

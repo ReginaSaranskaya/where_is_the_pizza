@@ -14,7 +14,7 @@
     border: none;
     padding: 8px;
     color: $primary;
-    border-radius: 6px 0 0 6px;
+    border-radius: 0;
   }
 
   &__input {
@@ -28,10 +28,6 @@
     background: $light-primary;
     padding: 8px;
   }
-}
-
-input ~ button {
-  border-radius: 0 6px 6px 0 !important;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
