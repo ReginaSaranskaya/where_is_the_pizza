@@ -1,33 +1,43 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 import styles from "./style.module.scss";
 import CardTitle from "./CardTitle";
-import Button from "../../ui-components/button/Button";
-import Price from "../../ui-components/price/Price";
-import PizzaImage from "./img/pizza.jpg";
+import Button from "../../ui-components/Button/Button";
+import Price from "../../ui-components/Price/Price";
+import Text from "../../ui-components/Text";
 
-function Card() {
+
+function Card({ src, name, ingredients, price, setModal, title }) {
   return (
-    <div className={styles.Card}>
-      <img
-        className={styles.Card__img}
-        src={PizzaImage}
-        alt="Чикен Сладкий Чили"
-      />
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+    <div className={styles.Card} onClick={(e) => {
+      e.preventDefault();
+      setModal(true)
+    }} onKeyUp={() => console.log(1)}>
+      <img className={styles.Card__img} src={src} alt={name} />
       <div className={styles.Card__textContainer}>
-        <CardTitle>Чикен Сладкий Чили</CardTitle>
-        <p className={styles.Card__text}>
-          Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соус
-        </p>
+        <CardTitle>{name}</CardTitle>
+        <Text>{ingredients.join(", ")}</Text>
       </div>
-
       <div className={styles.Card__container}>
-        <Button>Выбрать</Button>
-        <Price>от 399 ₽</Price>
+        <Button handleClick={setModal}>Выбрать</Button>
+        <Price>{title === "Пицца" ? `от ${price} ₽` : `${price} ₽` }</Price>
       </div>
     </div>
   );
 }
+
+// от {price} ₽
+
+
+Card.propTypes = {
+  src: PropTypes.string,
+  name: PropTypes.string,
+  ingredients: PropTypes.arrayOf(PropTypes.string),
+  price: PropTypes.string,
+  setModal: PropTypes.func.isRequired,
+  title: PropTypes.string
+};
 
 export default Card;

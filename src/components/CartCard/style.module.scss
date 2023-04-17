@@ -3,6 +3,7 @@
 .CartCardTitle {
   @extend %title4;
   margin-bottom: 8px;
+  min-width: 300px;
 }
 
 .CartCard {
@@ -30,12 +31,13 @@
 
   &__wrapper {
     width: 269px;
-    margin-right: 214px;
+    //margin-right: auto;
   }
 
   &__container {
     display: flex;
     align-items: center;
+    margin-left: auto;
   }
 
   &__counter {

@@ -13,12 +13,29 @@
     background-color: #fff;
     border: 1px solid $border-color;
     padding: 13px 16px;
+
+    &-big {
+      width: 850px;
+    }
+
+    &-medium {
+      width: 270px;
+    }
+
+    &-small {
+      width: 154px;
+    }
+
+    &:focus-visible,
+    &:active,
+    &:focus {
+      outline: none !important;
+      border-color: $primary;
+    }
+
+    &::placeholder {
+      color: $hint-color;
+    }
   }
 
-  &__input:focus-visible,
-  &__input:active,
-  &__input:focus {
-    outline: none !important;
-    border-color: $primary;
-  }
 }

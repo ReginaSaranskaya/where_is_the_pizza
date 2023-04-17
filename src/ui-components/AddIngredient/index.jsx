@@ -15,7 +15,7 @@ const icons = {
   pepper
 };
 
-function AdditionalIngredient({ name, text, price, handleClick }) {
+function AddIngridient({ name, text, price, handleClick }) {
   return (
     <label className={styles.AdditionalIngredient} htmlFor={name}>
       <input
@@ -35,11 +35,11 @@ function AdditionalIngredient({ name, text, price, handleClick }) {
   );
 }
 
-AdditionalIngredient.propTypes = {
+AddIngridient.propTypes = {
   name: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired
 };
 
-export default AdditionalIngredient;
+export default AddIngridient;

@@ -101,6 +101,7 @@
 .Header {
   width: 100%;
   background: white;
+  margin-bottom: 30px;
 
   &--fixed {
     position: fixed;
@@ -113,8 +114,12 @@
 
   &__container {
     margin: 0 auto;
-    width: 1290px;
+    width: 90%;
     padding: 16px 0;
+
+    @media (min-width: 1440px) {
+      width: 1290px;
+    }
 
     &--up {
       display: flex;
@@ -126,6 +131,7 @@
   &__location {
     width: auto;
     display: flex;
+    align-items: center;
     margin-right: 40px;
 
     &_city {

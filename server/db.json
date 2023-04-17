@@ -1,0 +1,138 @@
+{
+  "pizza": [
+    {
+      "id": 1,
+      "name": "Чикен Сладкий Чили",
+      "src": "image/sweetChilli.jpg",
+      "ingredients": ["chicken", "onion", "jalapenoPepper", "cheeseMozzarella", "tomatoSauce"],
+      "add": ["cheese", "onion", "champignons", "pepper"],
+      "price": "390"
+    },
+    {
+      "id": 2,
+      "name": "Огуречный расколбас",
+      "src": "image/easyPeasy.jpg",
+      "ingredients": ["burgerSauce", "cheeseMozzarella", "pickles", "ham", "onion"],
+      "add": ["cheese", "onion", "champignons", "pepper"],
+      "price": "490"
+    },
+    {
+      "id": 3,
+      "name": "4 сезона",
+      "src": "image/4season.jpg",
+      "ingredients":["bacon", "ham", "champignons", "chicken", "onion", "olives", "pickles", "tomato", "fetaCheese", "cheeseMozzarella", "tomatoSauce"],
+      "add": ["cheese", "onion", "champignons", "pepper"],
+      "price": "590"
+    },
+    {
+      "id": 4,
+      "name": "4 сыра",
+      "src": "image/4cheese.jpg",
+      "ingredients": ["cheeseMozzarella", "cheddarCheese", "parmesanCheese", "dorBlueCheese", "tomatoSauce"],
+      "add": ["cheese", "onion", "champignons", "pepper"],
+      "price": "290"
+    },
+    {
+      "id": 5,
+      "name": "Ветчина и грибы",
+      "src": "image/ham_and_mushroom.jpg",
+      "ingredients": ["cheeseMozzarella", "ham", "champignons", "tomatoSauce"],
+      "add": ["cheese", "onion", "champignons", "pepper"],
+      "price": "390"
+    },
+    {
+      "id": 6,
+      "name": "Маргарита",
+      "src": "image/margarita.jpg",
+      "ingredients": ["cheeseMozzarella", "tomato", "tomatoSauce"],
+      "add": ["cheese", "onion", "champignons", "pepper"],
+      "price": "290"
+    },
+    {
+      "id": 7,
+      "name": "Барбекю",
+      "src": "image/bbq.jpg",
+      "ingredients": ["cheeseMozzarella", "chicken", "pickles", "bbqSauce", "tomatoSauce"],
+      "add": ["cheese", "onion", "champignons", "pepper"],
+      "price": "590"
+    },
+    {
+      "id": 8,
+      "name": "Пепперони",
+      "src": "image/pepperoni.jpg",
+      "ingredients": ["cheeseMozzarella", "pepperoni", "tomatoSauce"],
+      "add": ["cheese", "onion", "champignons", "pepper"],
+      "price": "290"
+    }
+  ],
+  "sushi": [
+    {
+      "id": 9,
+      "name": "Филадельфия",
+      "src": "image/phila.jpg",
+      "ingredients": ["philadelphiaCheese", "salmon", "rice", "nori"],
+      "price": "450"
+    },
+    {
+      "id": 10,
+      "name": "Филадельфия с огурцом",
+      "src": "image/phila_cucumber.jpg",
+      "ingredients": ["philadelphiaCheese", "salmon", "cucumber", "rice", "nori"],
+      "price": "480"
+    },
+    {
+      "id": 11,
+      "name": "Филадельфия с креветкой",
+      "src": "image/phila_shrimp.jpg",
+      "ingredients": ["philadelphiaCheese", "salmon", "shrimp", "rice", "nori"],
+      "price": "475"
+    },
+    {
+      "id": 12,
+      "name": "Филадельфия с угрем",
+      "src": "image/phila_eel.jpg",
+      "ingredients": ["philadelphiaCheese", "salmon", "eel", "rice", "nori"],
+      "price": "490"
+    },
+    {
+      "id": 13,
+      "name": "Калифорния",
+      "src": "image/california.jpg",
+      "ingredients": ["snowCrab", "cucumber", "avocado", "masagoCaviar", "rice", "nori"],
+      "price": "350"
+    },
+    {
+      "id": 14,
+      "name": "Калифорния с креветкой",
+      "src": "image/california_shrimp.jpg",
+      "ingredients": ["shrimp", "cucumber", "avocado", "masagoCaviar", "rice", "nori"],
+      "price": "390"
+    },
+    {
+      "id": 15,
+      "name": "Калифорния с угрём",
+      "src": "image/california_eel.jpg",
+      "ingredients": ["eel", "cucumber", "avocado", "masagoCaviar", "rice", "nori"],
+      "price": "400"
+    },
+    {
+      "id": 16,
+      "name": "Калифорния Hot",
+      "src": "image/california_hot.jpg",
+      "ingredients": ["snowCrab", "cucumber", "avocado", "masagoCaviar", "pinkSauce", "rice", "nori"],
+      "price": "390"
+    }
+  ],
+  "ingridients_pizza": {
+    "sauces": ["tomatoSauce", "burgerSauce", "bbqSauce"],
+    "cheese": ["cheeseMozzarella", "cheddarCheese", "parmesanCheese", "dorBlueCheese", "fetaCheese"],
+    "meat": ["chicken", "bacon", "ham", "pepperoni"],
+    "vegetables": ["onion", "champignons", "jalapenoPepper", "olives", "pickles", "tomato"]
+  },
+  "ingridients_sushi": {
+    "seafood": ["salmon", "shrimp", "eel", "snowCrab"],
+    "extra" : ["philadelphiaCheese", "avocado", "cucumber", "pinkSauce", "masagoCaviar"],
+    "basic" : ["rice", "nori"]
+  },
+  "cart": []
+}

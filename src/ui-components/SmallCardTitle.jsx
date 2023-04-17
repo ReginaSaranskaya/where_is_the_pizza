@@ -1,14 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
+import cnBind from "classnames/bind";
 
-import styles from "./style.module.scss"
+import styles from "./style.module.scss";
 
-function SmallCardTitle({ children }) {
-  return <h3 className={styles.SmallCardTitle}>{children}</h3>;
+const cn = cnBind.bind(styles);
+
+function SmallCardTitle({ children, className }) {
+  return <h3 className={cn([`SmallCardTitle`, className])}>{children}</h3>;
 }
 
 SmallCardTitle.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
+  className: PropTypes.string
 };
 
 export default SmallCardTitle;

@@ -1,0 +1,72 @@
+@import "../../styles/extends";
+
+.ModalCard {
+  &__wrapp {
+    display: flex;
+    justify-content: space-between;
+    //align-items: center;
+  }
+
+  &__boxImg {
+    margin: auto 0;
+    width: calc(50% - 15px);
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  &__text {
+    margin: 15px 0;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    span {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__btnContainer {
+    width: 100%;
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  &__diameter {
+    width: calc(100% / 3);
+  }
+
+  &__dough {
+    width: calc(100% / 2);
+  }
+
+  &__additionalBox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  &__wrapper {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
-import cnBind from 'classnames/bind';
+import cnBind from "classnames/bind";
 
 import CartCardTitle from "./CartCardTitle";
 import Price from "../../ui-components/Price/Price";
@@ -10,10 +10,9 @@ import Counter from "../../ui-components/Counter/Counter";
 
 const cn = cnBind.bind(styles);
 
-
-function CartCard({onChange, size = "big"}) {
+function CartCard({ onChange, size = "big", className = "" }) {
   return (
-    <div className={cn(["CartCard", `CartCard_${size}`])}>
+    <div className={cn(["CartCard", `CartCard_${size}`, className])}>
       <img
         className={cn(["CartCard__img", `CartCard_${size}__img`])}
         src={PizzaImage}
@@ -28,7 +27,10 @@ function CartCard({onChange, size = "big"}) {
         </p>
       </div>
       <div className={cn(`CartCard_${size}__container`)}>
-        <Counter className={cn(`CartCard_${size}__counter`)} onChange={onChange}/>
+        <Counter
+          className={cn(`CartCard_${size}__counter`)}
+          onChange={onChange}
+        />
         <Price>399 ₽</Price>
       </div>
     </div>
@@ -37,7 +39,8 @@ function CartCard({onChange, size = "big"}) {
 
 CartCard.propTypes = {
   onChange: PropTypes.func.isRequired,
-  size: PropTypes.oneOf(['small', 'big']),
+  size: PropTypes.oneOf(["small", "big"]),
+  className: PropTypes.string,
 };
 
 export default CartCard;

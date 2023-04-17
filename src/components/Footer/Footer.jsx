@@ -14,11 +14,14 @@ const cn = cnBind.bind(styles);
 function Footer() {
   return (
     <footer className={styles.Footer}>
-      <span className={styles.Footer__copyright}>© Copyright 2021 — Куда Пицца</span>
-      <Logotype />
+      <div className={styles.Footer__box}>
+        <Logotype />
+        <span className={styles.Footer__copyright}>© Copyright 2021 — Куда Пицца</span>
+      </div>
+
       <div className={styles.Footer__wrapper}>
         <h3 className={styles.Footer__title}>Контакты</h3>
-        <Link className={cn(["Footer__contact", "Footer__phone"])} to="+7 (926) 223-10-11">
+        <Link className={cn(["Footer__contact", "Footer__phone"])} type="tel" to="tel:+7 (926) 223-10-11">
           <img className={[styles["Footer__phone--icn"]]}  src={Phone} alt="Телефон"/>
           +7 (926) 223-10-11
         </Link>

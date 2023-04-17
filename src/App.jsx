@@ -1,16 +1,16 @@
 import React from "react";
-// import Header from "./components/Header/Header";
-// import Footer from "./components/Footer/Footer";
+import { Route, Routes } from "react-router-dom";
 
-// import RadioButton from "./ui-components/RadioButton/RadioButton";
-// import AdditionalIngredient from "./ui-components/AddIngredient/AdditionalIngredient";
+import HomePage from "./pages/HomePage/HomePage";
+import CartPage from "./pages/CartPage/CartPage";
+import Layout from "./components/Layout/Layout";
 
 
 // const ingridients = [
-//   { name: 'cheese', text: "Моцарелла", Price: "59" },
-//   { name: 'champignons', text: "Шампиньоны", Price: "59" },
-//   { name: 'onion', text: "Красный лук", Price: "59" },
-//   { name: 'pepper', text: "Сладкий перец", Price: "59" },
+//   { name: 'cheese', text: "Моцарелла", price: "59" },
+//   { name: 'champignons', text: "Шампиньоны", price: "59" },
+//   { name: 'onion', text: "Красный лук", price: "59" },
+//   { name: 'pepper', text: "Сладкий перец", price: "59" },
 // ];
 
 // function reg(e) {
@@ -18,16 +18,16 @@ import React from "react";
 //   console.log('click')
 // }
 
-// const handleChange = (e) => {
-//   console.log(e)
-// }
 
 function App() {
-
-  // const [isModal, setModal] = React.useState(true);
-
   return (
     <div className="App">
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="/cart" element={<CartPage />} />
+        </Route>
+      </Routes>
       {/* <Button className="Button" type="Button" onClick={() => setModal(true)}>Click Here</Button> */}
       {/* {isModal && <Modal onClose={setModal} isVisible={isModal} location="center"> */}
       {/*  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> */}
@@ -55,7 +55,7 @@ function App() {
       <FormsRadioButton id="payment" name="payment">
         Наличными
       </FormsRadioButton>
-      // {ingridients.map(({name, text, Price}) => <AdditionalIngredient name={name} text={text} Price={Price} />)}
+      // {ingridients.map(({name, text, Price}) => <Index name={name} text={text} Price={Price} />)}
       <Price>от 399 ₽</Price>
       <FormsInput type="text" subtext="Алексей" name="firstName">Имя*</FormsInput> */}
     </div>

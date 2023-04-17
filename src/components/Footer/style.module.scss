@@ -1,13 +1,27 @@
 @import "../../styles/extends";
 
 .Footer {
-  position: relative;
+  border-top: $border ;
   padding: 32px 0;
-  width: 1290px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+
+  @media (min-width: 1440px) {
+    width: 1290px;
+  }
+
+  &__copyright {
+    display: block;
+    margin-top: 146px;
+    font-family: "Arial", serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $font-color;
+  }
 
   &__title {
     @extend %title3;
@@ -45,14 +59,11 @@
     }
   }
 
-  &__copyright {
-    font-family: "Arial", serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: $font-color;
-    position: absolute;
-    left: 0;
-    bottom: 32px;
+  &__phone:hover, &__socials:hover {
+    color: $primary;
+  }
+
+  &__phone:active, &__socials:active {
+    color: $color-active-btn;
   }
 }

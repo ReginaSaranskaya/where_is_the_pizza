@@ -11,10 +11,15 @@
   align-items: center;
   border: $border;
   border-color: $primary;
+  transition: all 0.5s ease-out;
 
   &_small {
     padding: 0 16px;
     height: 40px;
+  }
+
+  &_big {
+    padding: 12px 23px;
   }
 
   &_text {

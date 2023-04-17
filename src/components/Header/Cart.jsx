@@ -6,7 +6,7 @@ import styles from "./style.module.scss";
 
 function Cart({ children }) {
   return (
-    <Link className={styles.Cart} to="/">
+    <Link className={styles.Cart} to="/cart">
       <div className={styles.Cart__container}>
         <svg
           className={styles.Cart__img}

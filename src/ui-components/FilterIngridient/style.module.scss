@@ -2,6 +2,8 @@
 
 .FilterIngridient {
 
+  margin: 0 8px 8px 0;
+
   &__input {
     appearance: none;
   }
@@ -13,6 +15,11 @@
     display: inline-block;
     border: 1px solid $border-color;
     padding: 11px 16px;
+    transition: all .4s ease-out;
+
+    &:hover {
+      border-color: $primary;
+    }
   }
 
   &__input:checked + &__label {

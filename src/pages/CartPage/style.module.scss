@@ -1,0 +1,203 @@
+@import "../../styles/extends";
+
+.Order {
+  &__item {
+    margin-bottom: 16px;
+  }
+
+  &__container {
+    margin-bottom: 30px;
+    padding: 26px 24px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border: $border;
+    border-radius: 8px;
+  }
+}
+
+.PersonalData {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: $border;
+  margin-bottom: 20px;
+
+  &__title {
+    @extend %title3;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+
+.DeliveryType {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__containerRadio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    @extend %title3;
+    margin-bottom: 16px;
+  }
+}
+
+.Comment {
+  &__title {
+    @extend %title3;
+    margin-bottom: 16px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 200px;
+    @extend %button;
+    @extend %text;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    padding: 13px 16px;
+    resize: none;
+
+    &:focus-visible,
+    &:active,
+    &:focus {
+      outline: none !important;
+      border-color: $primary;
+    }
+
+    &::placeholder {
+      color: $hint-color;
+    }
+  }
+}
+
+.Delivery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &__input {
+    margin-bottom: 16px;
+  }
+}
+
+.Pickup {
+  &__text {
+    @extend %smallText;
+    color: $hint-color;
+  }
+
+  &__select {
+    @extend %button;
+    @extend %text;
+    width: 850px;
+    margin: 8px 0 16px;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    padding: 13px 16px;
+
+    &:focus-visible,
+    &:active,
+    &:focus {
+      outline: none !important;
+      border-color: $primary;
+    }
+
+    &::placeholder {
+      color: $hint-color;
+    }
+  }
+}
+
+.InTime {
+  display: flex;
+  align-items: center;
+}
+
+input[type="date"],
+input[type="time"] {
+  margin: 0;
+  margin-right: 16px;
+}
+
+.CartPage {
+  &__main {
+    width: 900px;
+    padding: 10px 25px 60px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    margin: 24px 0 30px;
+  }
+}
+
+.Form {
+  &__delivery {
+    padding-bottom: 20px;
+    border-bottom: $border;
+    margin-bottom: 21px;
+  }
+
+  &__container {
+    padding-top: 30px;
+    border-top: $border;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.Time {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__text {
+    margin-bottom: 12px;
+    width: 100%;
+    @extend %smallText;
+    color: $hint-color;
+  }
+
+  &__radio {
+    margin-right: 24px;
+  }
+}
+
+.Payment,
+.Change {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: $border;
+  margin-bottom: 20px;
+
+  &__title {
+    @extend %title3;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__radio {
+    margin-right: 24px;
+  }
+
+  &__number {
+    margin: 0;
+  }
+}

@@ -20,7 +20,8 @@
   },
   "plugins": ["react"],
   "rules": {
-    "react/require-default-props": ["warn", { "functions": "defaultArguments" }],
-    "jsx-a11y/label-has-associated-control": "off"
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/jsx-props-no-spreading" : "off",
+    "react/require-default-props" : "off"
   }
 }

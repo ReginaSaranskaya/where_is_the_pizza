@@ -70,10 +70,13 @@
   &__label {
     @extend %button;
     @extend %smallText;
+    width: 100%;
     background: white;
     display: inline-block;
     border: 1px solid $border-color;
+    text-align: center;
     padding: 11px 16px;
+    box-sizing: border-box;
   }
 
   &__input:checked + &__label {
